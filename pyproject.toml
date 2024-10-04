@@ -1,0 +1,69 @@
+[project]
+name = "mathematics-rafael"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.ruff]
+target-version = "py312"
+line-length = 79
+indent-width = 4
+fix = true
+unsafe-fixes = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "CPY001",
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D107",
+    "D203",
+    "D211",
+    "D213",
+    "FIX002",
+    "G004",
+    "ISC001",
+    "PGH003",
+    "TD003",
+]
+exclude = [
+    ".vscode/*.py",
+    ".venv/**",
+    "t_est*.py",
+    "venv/**",
+    "**/*.pyi",
+    "test*.py",
+    "**/node_modules",
+    "**/__pycache__",
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "preserve" # in order to not replace single quotes within f-strings
+indent-style = "space"
+line-ending = "auto"
+
+[tool.pyright]
+exclude = [
+    "**/*.pyi",
+    ".vscode/*.py",
+    ".venv/**",
+    "t_est*.py",
+    "test*.py",
+    "venv/**",
+    "**/node_modules",
+    "**/__pycache__",
+]
+strict = ["*"]
+reportMissingTypeStubs = "none"
+reportUnknownMemberType = "none"
+reportUntypedFunctionDecorator = "none"
+useLibraryCodeForTypes = true
+autoSearchPaths = true

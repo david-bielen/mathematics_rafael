@@ -23,7 +23,8 @@ Welcome to the **Math Quiz Game**! This interactive command-line application cha
 
 ### Prerequisites
 
-- **Python 3.7 or later**: Ensure you have Python installed on your system. You can download it from the [official website](https://www.python.org/downloads/).
+- **Python 3.12 or later**: Ensure you have Python installed on your system. You can download it from the [official website](https://www.python.org/downloads/).
+- **UV**: Download and install UV from [official website](https://docs.astral.sh/uv/getting-started/installation/). 
 
 ### Clone the Repository
 
@@ -34,21 +35,15 @@ cd math-quiz-game
 
 ### Install Dependencies
 
-The game relies on the pytz library for timezone handling. Install it using pip:
+The game relies on the pytz library for timezone handling. Add it using uv:
 ```bash
-pip install pytz
-```
-
-Alternatively, if you prefer using requirements.txt, create the file and add the dependencies:
-```bash
-echo "pytz" > requirements.txt
-pip install -r requirements.txt
+uv add pytz
 ```
 
 ## Usage
 
 Run the game using Python:
 ```bash
-python main.py
+uv run main.py
 ```
 

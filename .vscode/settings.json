@@ -1,0 +1,6 @@
+{
+    "python.analysis.typeCheckingMode": "off",
+    "editor.inlayHints.padding": false,
+    "typescript.inlayHints.variableTypes.enabled": false,
+    "typescript.inlayHints.parameterNames.enabled": "all"
+}

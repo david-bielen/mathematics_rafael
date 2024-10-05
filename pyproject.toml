@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pytz>=2024.2",
+    "ruff>=0.6.9",
+]
+
 
 [tool.ruff]
 target-version = "py312"
@@ -30,7 +34,8 @@ ignore = [
     "G004",
     "ISC001",
     "PGH003",
-    "TD003",
+    "S311",
+    "T201",
 ]
 exclude = [
     ".vscode/*.py",
@@ -60,6 +65,7 @@ exclude = [
     "venv/**",
     "**/node_modules",
     "**/__pycache__",
+    "main.py",
 ]
 strict = ["*"]
 reportMissingTypeStubs = "none"

@@ -24,7 +24,7 @@ Welcome to the **Math Quiz Game**! This interactive command-line application cha
 ### Prerequisites
 
 - **Python 3.12 or later**: Ensure you have Python installed on your system. You can download it from the [official website](https://www.python.org/downloads/).
-- **UV**: Download and install UV from [official website](https://docs.astral.sh/uv/getting-started/installation/). 
+- **UV**: Download and install UV from the [official website](https://docs.astral.sh/uv/getting-started/installation/). 
 
 ### Clone the Repository
 

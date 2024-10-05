@@ -11,3 +11,4 @@ wheels/
 
 stats.json
 uv.lock
+*syncthing*

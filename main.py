@@ -90,7 +90,7 @@ class ComparisonQuestion(Question):
             "-": operator.sub,
             "*": operator.mul,
         }
-        num1 = random.randint(1, 10)
+        num1 = random.randint(1, 20)
         num2 = random.randint(1, 10)
         op_symbol, operation = random.choice(list(ops.items()))
         if operation == operator.sub:
@@ -155,8 +155,15 @@ def play_game() -> None:
         while True:
             user_input = question.ask_question()
             if question.check_answer(user_input):
-                print("Correct! Let's move to the next question.\n")
                 stats_manager.increment_today()
+                if stats_manager.get_today_count() % 5 == 0:
+                    print(
+                        "\nYou have answered "
+                        f"{stats_manager.get_today_count()} "
+                        "questions correctly today. Keep it up!\n",
+                    )
+                else:
+                    print("Correct! Let's move to the next question.\n")
                 break
 
 

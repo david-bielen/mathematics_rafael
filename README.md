@@ -8,7 +8,6 @@ Welcome to the **Math Quiz Game**! This interactive command-line application cha
 - [Installation](#installation)
   - [Prerequisites](#prerequisites)
   - [Clone the Repository](#clone-the-repository)
-  - [Install Dependencies](#install-dependencies)
 - [Usage](#usage)
 
 ## Features
@@ -29,21 +28,17 @@ Welcome to the **Math Quiz Game**! This interactive command-line application cha
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/math-quiz-game.git
-cd math-quiz-game
-```
-
-### Install Dependencies
-
-The game relies on the pytz library for timezone handling. Add it using uv:
-```bash
-uv add pytz
+git clone https://github.com/david-bielen/mathematics_rafael.git
+cd mathematics_rafael
 ```
 
 ## Usage
 
-Run the game using Python:
+Run the game with uv:
 ```bash
 uv run main.py
 ```
+
+`uv run` installs Python 3.12 and the dependencies (`pytz`) on first run, so
+there is no separate install step.
 

@@ -12,3 +12,4 @@ wheels/
 stats.json
 uv.lock
 *syncthing*
+.DS_Store

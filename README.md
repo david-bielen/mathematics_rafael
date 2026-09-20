@@ -1,6 +1,6 @@
 # Math Quiz Game
 
-Welcome to the **Math Quiz Game**! This interactive command-line application challenges users with arithmetic and comparison questions, tracking the number of correct answers each day. Perfect for sharpening your math skills while keeping a daily log of your progress.
+Welcome to the **Math Quiz Game**! This interactive command-line application asks questions in Swedish, modelled on the exercises in Rafael's school workbook (chapters 2-11: mental addition and subtraction up to 1000, place value, comparing and ordering numbers, number sequences and euro word problems). It tracks the number of correct answers each day, which is what unlocks the games.
 
 ## Table of Contents
 
@@ -9,11 +9,18 @@ Welcome to the **Math Quiz Game**! This interactive command-line application cha
   - [Prerequisites](#prerequisites)
   - [Clone the Repository](#clone-the-repository)
 - [Usage](#usage)
+- [Games](#games)
 
 ## Features
 
-- **Arithmetic Questions**: Solve addition, subtraction, and multiplication problems.
-- **Comparison Questions**: Determine the correct relational operator (`<`, `=`, `>`) between two expressions.
+- **Räkna**: Addition and subtraction up to 1000, including chains of three or four terms (`125 + 93 + 244`).
+- **Talföljder**: Continue a sequence up or down (`380, 382, 384, 386, ...`).
+- **Tal som fattas**: Find the missing term (`32 - □ = 15`).
+- **Talsorter**: Split a number into hundreds, tens and ones (`548 = 500 + 40 + 8`) and back again.
+- **Jämföra och ordna**: Pick `<`, `=` or `>` (also against a split number, `240 __ 200 + 60`) and sort six numbers.
+- **Pengar och textuppgifter**: Count euro notes and coins, and solve the workbook's story problems.
+- **Bokstavsekvationer**: Work out what each letter stands for from a small system of equations.
+- **Forgiving answers**: `500 + 40 + 8`, `500 40 8` and `92 €` are all accepted; after three wrong tries the answer is shown and the question does not count.
 - **Daily Statistics**: Tracks and stores the number of correct answers each day in Helsinki's timezone.
 - **Persistent Storage**: Statistics are saved in a `stats.json` file, allowing you to monitor your progress over time.
 - **User-Friendly Interface**: Simple command-line prompts make the game easy to play.
@@ -39,6 +46,17 @@ Run the game with uv:
 uv run main.py
 ```
 
-`uv run` installs Python 3.12 and the dependencies (`pytz`) on first run, so
+`uv run` installs Python 3.12 and the dependencies (`pydantic`, `pytz`) on first run, so
 there is no separate install step.
 
+
+## Games
+
+`mario.py` and `karting.py` only start their game once `stats.json` shows
+`REQUIRED_CORRECT_ANSWERS` (10) correct answers for today; otherwise they say
+in Swedish how many questions are still missing.
+
+```bash
+uv run mario.py
+uv run karting.py
+```

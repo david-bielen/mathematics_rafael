@@ -8,7 +8,7 @@ import random
 from abc import ABC, abstractmethod
 from pathlib import Path
 
-import pytz  # type: ignore
+import pytz
 
 
 class Question(ABC):

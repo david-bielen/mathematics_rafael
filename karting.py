@@ -9,7 +9,9 @@ import pytz
 REQUIRED_CORRECT_ANSWERS = 10
 GAME_DIR = Path("/home/rafael/Downloads/SuperTuxKart-1.4-linux-x86_64")
 helsinki_tz = pytz.timezone("Europe/Helsinki")
-stats = json.loads(Path("stats.json").read_text())
+stats_file = Path("stats.json")
+# A fresh clone has no stats yet: treat that as "nothing answered today".
+stats = json.loads(stats_file.read_text()) if stats_file.is_file() else {}
 today = datetime.datetime.now(tz=helsinki_tz).strftime("%Y-%m-%d")
 if stats.get(today, 0) < REQUIRED_CORRECT_ANSWERS:
     print(
